@@ -1,0 +1,18 @@
+﻿@{
+    Layout = null;
+}
+<div>-------------------------Synchronous Programming Result--------------------------</div>
+<div>Elapsed: @ViewBag.Time</div>
+<div>ElapsedTick: @ViewBag.ElapsedTicks</div>
+<div>GoogleContentLength: @ViewBag.GLength</div>
+<div>YahooContentLength: @ViewBag.YLength</div>
+<div>MicrosoftContentLength: @ViewBag.MLength</div>
+<div>-------------------------Asynchronous Programming Result--------------------------</div>
+<div>Elapsed: @ViewBag.TimeAsync</div>
+<div>ElapsedTick: @ViewBag.ElapsedTicksAsync</div>
+<div>GoogleContentLength: @ViewBag.GLengthAsync</div>
+<div>YahooContentLength: @ViewBag.YLengthAsync</div>
+<div>MicrosoftContentLength: @ViewBag.MLengthAsync</div>
+<div>-------------------------Difference B/w Synchronous And Asynchronous Programming Result--------------------------</div>
+<div>Differance Elapsed: @(TimeSpan.FromTicks(Convert.ToInt64(ViewBag.ElapsedTicks)- Convert.ToInt64(ViewBag.ElapsedTicksAsync)))</div>
+<div>Differance Elapsed Tick: @(Convert.ToDouble(ViewBag.ElapsedTicks)- Convert.ToDouble(ViewBag.ElapsedTicksAsync))</div>
